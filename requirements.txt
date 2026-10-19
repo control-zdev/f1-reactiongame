@@ -1,0 +1,6 @@
+# Data pipeline (reactions.py). Install with: pip install -r requirements.txt
+# Tested with fastf1 3.8.3
+fastf1>=3.8
+pandas
+numpy
+requests

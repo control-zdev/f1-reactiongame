@@ -1,0 +1,66 @@
+:root {
+  --carbon: #0c0c10;
+  --panel: #17171f;
+  --panel-2: #1f1f29;
+  --line: #2c2c38;
+  --red: #e10600;
+  --white: #f5f5f7;
+  --muted: #9a9cab;
+  --green: #00d26a;
+  --purple: #b34cff;
+  --yellow: #ffd400;
+  color-scheme: dark;
+  font-family: 'Titillium Web', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--white);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { background: var(--carbon); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* carbon-fibre weave, calmed by a dark vignette so it stays in the background */
+  background-color: #131313;
+  background-image:
+    linear-gradient(27deg, #151515 5px, transparent 5px),
+    linear-gradient(207deg, #151515 5px, transparent 5px),
+    linear-gradient(27deg, #222 5px, transparent 5px),
+    linear-gradient(207deg, #222 5px, transparent 5px),
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-position: 0 5px, 10px 0, 0 10px, 10px 5px, 0 0, 0 0;
+  background-size: 20px 20px;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 10%, rgba(12, 12, 16, 0.35), rgba(8, 8, 11, 0.94) 75%);
+}
+
+:focus-visible {
+  outline: 3px solid var(--white);
+  outline-offset: 2px;
+}
+
+button, select { font: inherit; }
+
+kbd {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid #55566a;
+  border-bottom-width: 3px;
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--white);
+  font: inherit;
+  font-size: 0.85em;
+  font-weight: 600;
+}
